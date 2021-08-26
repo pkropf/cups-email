@@ -3,9 +3,9 @@
 *FileVersion:	"1.0"
 *LanguageVersion: English
 *LanguageEncoding: ISOLatin1
-*PCFileName:	"EMAIL.PPD"
+*PCFileName:	"EMAILX.PPD"
 *Manufacturer:	"Generic"
-*Product:	"(email)"
+*Product:	"(emailx)"
 *cupsFax:	False
 *cupsFilter:	"application/vnd.cups-postscript 0 -"
 *cupsVersion:	1.1

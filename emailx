@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# /usr/lib/cups/backend/email - Script to send e-mail confirmations via the CUPS
+# /usr/lib/cups/backend/emailx - Script to send e-mail confirmations via the CUPS
 #                               print server
 #
 # This program is a modified version of fax4cups, available at
 # http://vigna.dsi.unimi.it/fax4CUPS/
 #
-# The current home of this script is https://github.com/aardsoft/cups-email
+# The current home of this script is https://github.com/aardsoft/cups-emailx
 #
 # This script should not need any modifications to adjust it to specific
 # installations - all configuration happens through printer options and
@@ -42,11 +42,11 @@ config_user_vars="MailSubject
         MailFrom
         MailBody"
 
-echo "DEBUG:email backend call arguments $@" 1>&2
+echo "DEBUG:emailx backend call arguments $@" 1>&2
 # when called without any arguments CUPS expects us to print a backend
 # info for use in the new printer page
 if [ $# -eq 0 ]; then
-    echo "virtual email \"Unknown\" \"E-Mail Device\""
+    echo "virtual emailx \"Unknown\" \"E-Mail Device\""
     exit 0
 fi
 
