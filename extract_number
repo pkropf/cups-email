@@ -1,0 +1,16 @@
+#! /bin/sh
+
+num=`pdf2txt.py -p 1 $1 | awk 'c&&!--c;/INVOICE:/{c=2}'`
+
+if [ -z "$num" ]
+then
+    num=`pdf2txt.py -p 1 $1 | grep -v 'PURCHASE ORDER:' | awk 'c&&!--c;/ORDER:/{c=2}'`
+fi
+
+if [ -z "$num" ]
+then
+    exit 1
+fi
+
+echo $num
+exit 0
